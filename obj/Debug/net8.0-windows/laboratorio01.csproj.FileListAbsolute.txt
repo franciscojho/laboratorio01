@@ -1,0 +1,16 @@
+C:\Users\Franc\Documents\projects\laboratorios\laboratorio01\laboratorio01\bin\Debug\net8.0-windows\laboratorio01.exe
+C:\Users\Franc\Documents\projects\laboratorios\laboratorio01\laboratorio01\bin\Debug\net8.0-windows\laboratorio01.deps.json
+C:\Users\Franc\Documents\projects\laboratorios\laboratorio01\laboratorio01\bin\Debug\net8.0-windows\laboratorio01.runtimeconfig.json
+C:\Users\Franc\Documents\projects\laboratorios\laboratorio01\laboratorio01\bin\Debug\net8.0-windows\laboratorio01.dll
+C:\Users\Franc\Documents\projects\laboratorios\laboratorio01\laboratorio01\bin\Debug\net8.0-windows\laboratorio01.pdb
+C:\Users\Franc\Documents\projects\laboratorios\laboratorio01\laboratorio01\obj\Debug\net8.0-windows\laboratorio01.frmOperacion.resources
+C:\Users\Franc\Documents\projects\laboratorios\laboratorio01\laboratorio01\obj\Debug\net8.0-windows\laboratorio01.csproj.GenerateResource.cache
+C:\Users\Franc\Documents\projects\laboratorios\laboratorio01\laboratorio01\obj\Debug\net8.0-windows\laboratorio01.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Franc\Documents\projects\laboratorios\laboratorio01\laboratorio01\obj\Debug\net8.0-windows\laboratorio01.AssemblyInfoInputs.cache
+C:\Users\Franc\Documents\projects\laboratorios\laboratorio01\laboratorio01\obj\Debug\net8.0-windows\laboratorio01.AssemblyInfo.cs
+C:\Users\Franc\Documents\projects\laboratorios\laboratorio01\laboratorio01\obj\Debug\net8.0-windows\laboratorio01.csproj.CoreCompileInputs.cache
+C:\Users\Franc\Documents\projects\laboratorios\laboratorio01\laboratorio01\obj\Debug\net8.0-windows\laboratorio01.dll
+C:\Users\Franc\Documents\projects\laboratorios\laboratorio01\laboratorio01\obj\Debug\net8.0-windows\refint\laboratorio01.dll
+C:\Users\Franc\Documents\projects\laboratorios\laboratorio01\laboratorio01\obj\Debug\net8.0-windows\laboratorio01.pdb
+C:\Users\Franc\Documents\projects\laboratorios\laboratorio01\laboratorio01\obj\Debug\net8.0-windows\laboratorio01.genruntimeconfig.cache
+C:\Users\Franc\Documents\projects\laboratorios\laboratorio01\laboratorio01\obj\Debug\net8.0-windows\ref\laboratorio01.dll
