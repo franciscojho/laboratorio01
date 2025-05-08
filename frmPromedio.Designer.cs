@@ -29,20 +29,20 @@
         private void InitializeComponent()
         {
             label1 = new Label();
-            textBox1 = new TextBox();
-            textBox2 = new TextBox();
+            txtScoreA = new TextBox();
+            txtScoreB = new TextBox();
             label2 = new Label();
-            textBox3 = new TextBox();
+            txtScoreC = new TextBox();
             label3 = new Label();
-            textBox4 = new TextBox();
+            txtScoreD = new TextBox();
             label4 = new Label();
-            textBox5 = new TextBox();
+            txtAverageScore = new TextBox();
             label5 = new Label();
-            textBox6 = new TextBox();
+            txtConditions = new TextBox();
             label6 = new Label();
-            button1 = new Button();
-            button2 = new Button();
-            button3 = new Button();
+            btnCalculate = new Button();
+            btnClean = new Button();
+            btnLogout = new Button();
             SuspendLayout();
             // 
             // label1
@@ -54,19 +54,19 @@
             label1.TabIndex = 0;
             label1.Text = "Nota 1:";
             // 
-            // textBox1
+            // txtScoreA
             // 
-            textBox1.Location = new Point(154, 59);
-            textBox1.Name = "textBox1";
-            textBox1.Size = new Size(102, 23);
-            textBox1.TabIndex = 1;
+            txtScoreA.Location = new Point(154, 59);
+            txtScoreA.Name = "txtScoreA";
+            txtScoreA.Size = new Size(102, 23);
+            txtScoreA.TabIndex = 1;
             // 
-            // textBox2
+            // txtScoreB
             // 
-            textBox2.Location = new Point(154, 101);
-            textBox2.Name = "textBox2";
-            textBox2.Size = new Size(102, 23);
-            textBox2.TabIndex = 3;
+            txtScoreB.Location = new Point(154, 101);
+            txtScoreB.Name = "txtScoreB";
+            txtScoreB.Size = new Size(102, 23);
+            txtScoreB.TabIndex = 3;
             // 
             // label2
             // 
@@ -77,12 +77,12 @@
             label2.TabIndex = 2;
             label2.Text = "Nota 2:";
             // 
-            // textBox3
+            // txtScoreC
             // 
-            textBox3.Location = new Point(154, 145);
-            textBox3.Name = "textBox3";
-            textBox3.Size = new Size(102, 23);
-            textBox3.TabIndex = 5;
+            txtScoreC.Location = new Point(154, 145);
+            txtScoreC.Name = "txtScoreC";
+            txtScoreC.Size = new Size(102, 23);
+            txtScoreC.TabIndex = 5;
             // 
             // label3
             // 
@@ -93,12 +93,12 @@
             label3.TabIndex = 4;
             label3.Text = "Nota 3:";
             // 
-            // textBox4
+            // txtScoreD
             // 
-            textBox4.Location = new Point(154, 186);
-            textBox4.Name = "textBox4";
-            textBox4.Size = new Size(102, 23);
-            textBox4.TabIndex = 7;
+            txtScoreD.Location = new Point(154, 186);
+            txtScoreD.Name = "txtScoreD";
+            txtScoreD.Size = new Size(102, 23);
+            txtScoreD.TabIndex = 7;
             // 
             // label4
             // 
@@ -109,12 +109,12 @@
             label4.TabIndex = 6;
             label4.Text = "Nota 4:";
             // 
-            // textBox5
+            // txtAverageScore
             // 
-            textBox5.Location = new Point(154, 230);
-            textBox5.Name = "textBox5";
-            textBox5.Size = new Size(102, 23);
-            textBox5.TabIndex = 9;
+            txtAverageScore.Location = new Point(154, 230);
+            txtAverageScore.Name = "txtAverageScore";
+            txtAverageScore.Size = new Size(102, 23);
+            txtAverageScore.TabIndex = 9;
             // 
             // label5
             // 
@@ -125,12 +125,12 @@
             label5.TabIndex = 8;
             label5.Text = "Promedio:";
             // 
-            // textBox6
+            // txtConditions
             // 
-            textBox6.Location = new Point(154, 273);
-            textBox6.Name = "textBox6";
-            textBox6.Size = new Size(297, 23);
-            textBox6.TabIndex = 11;
+            txtConditions.Location = new Point(154, 273);
+            txtConditions.Name = "txtConditions";
+            txtConditions.Size = new Size(168, 23);
+            txtConditions.TabIndex = 11;
             // 
             // label6
             // 
@@ -141,56 +141,58 @@
             label6.TabIndex = 10;
             label6.Text = "Condiciones:";
             // 
-            // button1
+            // btnCalculate
             // 
-            button1.Location = new Point(65, 340);
-            button1.Name = "button1";
-            button1.Size = new Size(75, 23);
-            button1.TabIndex = 12;
-            button1.Text = "button1";
-            button1.UseVisualStyleBackColor = true;
+            btnCalculate.Location = new Point(65, 340);
+            btnCalculate.Name = "btnCalculate";
+            btnCalculate.Size = new Size(75, 23);
+            btnCalculate.TabIndex = 12;
+            btnCalculate.Text = "Calcular";
+            btnCalculate.UseVisualStyleBackColor = true;
+            btnCalculate.Click += btnCalculate_Click;
             // 
-            // button2
+            // btnClean
             // 
-            button2.Location = new Point(264, 340);
-            button2.Name = "button2";
-            button2.Size = new Size(75, 23);
-            button2.TabIndex = 13;
-            button2.Text = "button2";
-            button2.UseVisualStyleBackColor = true;
+            btnClean.Location = new Point(264, 340);
+            btnClean.Name = "btnClean";
+            btnClean.Size = new Size(75, 23);
+            btnClean.TabIndex = 13;
+            btnClean.Text = "Limpiar";
+            btnClean.UseVisualStyleBackColor = true;
+            btnClean.Click += btnClean_Click;
             // 
-            // button3
+            // btnLogout
             // 
-            button3.Location = new Point(452, 340);
-            button3.Name = "button3";
-            button3.Size = new Size(75, 23);
-            button3.TabIndex = 14;
-            button3.Text = "button3";
-            button3.UseVisualStyleBackColor = true;
+            btnLogout.Location = new Point(452, 340);
+            btnLogout.Name = "btnLogout";
+            btnLogout.Size = new Size(75, 23);
+            btnLogout.TabIndex = 14;
+            btnLogout.Text = "Salir";
+            btnLogout.UseVisualStyleBackColor = true;
+            btnLogout.Click += btnLogout_Click;
             // 
             // frmPromedio
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(600, 433);
-            Controls.Add(button3);
-            Controls.Add(button2);
-            Controls.Add(button1);
-            Controls.Add(textBox6);
+            Controls.Add(btnLogout);
+            Controls.Add(btnClean);
+            Controls.Add(btnCalculate);
+            Controls.Add(txtConditions);
             Controls.Add(label6);
-            Controls.Add(textBox5);
+            Controls.Add(txtAverageScore);
             Controls.Add(label5);
-            Controls.Add(textBox4);
+            Controls.Add(txtScoreD);
             Controls.Add(label4);
-            Controls.Add(textBox3);
+            Controls.Add(txtScoreC);
             Controls.Add(label3);
-            Controls.Add(textBox2);
+            Controls.Add(txtScoreB);
             Controls.Add(label2);
-            Controls.Add(textBox1);
+            Controls.Add(txtScoreA);
             Controls.Add(label1);
             Name = "frmPromedio";
             Text = "frmPromedio";
-            Load += frmPromedio_Load;
             ResumeLayout(false);
             PerformLayout();
         }
@@ -198,19 +200,19 @@
         #endregion
 
         private Label label1;
-        private TextBox textBox1;
-        private TextBox textBox2;
+        private TextBox txtScoreA;
+        private TextBox txtScoreB;
         private Label label2;
-        private TextBox textBox3;
+        private TextBox txtScoreC;
         private Label label3;
-        private TextBox textBox4;
+        private TextBox txtScoreD;
         private Label label4;
-        private TextBox textBox5;
+        private TextBox txtAverageScore;
         private Label label5;
-        private TextBox textBox6;
+        private TextBox txtConditions;
         private Label label6;
-        private Button button1;
-        private Button button2;
-        private Button button3;
+        private Button btnCalculate;
+        private Button btnClean;
+        private Button btnLogout;
     }
 }

@@ -35,17 +35,17 @@
             label5 = new Label();
             label6 = new Label();
             groupBox1 = new GroupBox();
-            label7 = new Label();
-            label8 = new Label();
-            txtAddition = new TextBox();
-            txtSubtraction = new TextBox();
-            txtMultiplication = new TextBox();
             txtDivision = new TextBox();
+            txtMultiplication = new TextBox();
+            txtSubtraction = new TextBox();
+            txtAddition = new TextBox();
+            label8 = new Label();
+            label7 = new Label();
             txtSecondValue = new TextBox();
             txtFirstValue = new TextBox();
-            button1 = new Button();
-            button2 = new Button();
-            button3 = new Button();
+            btnCalculate = new Button();
+            btnClean = new Button();
+            btnLogout = new Button();
             groupBox1.SuspendLayout();
             SuspendLayout();
             // 
@@ -126,17 +126,34 @@
             groupBox1.Size = new Size(776, 205);
             groupBox1.TabIndex = 6;
             groupBox1.TabStop = false;
-            groupBox1.Enter += groupBox1_Enter;
             // 
-            // label7
+            // txtDivision
             // 
-            label7.AutoSize = true;
-            label7.Font = new Font("Segoe UI", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label7.Location = new Point(20, 124);
-            label7.Name = "label7";
-            label7.Size = new Size(96, 17);
-            label7.TabIndex = 6;
-            label7.Text = "Multiplicación";
+            txtDivision.Location = new Point(122, 157);
+            txtDivision.Name = "txtDivision";
+            txtDivision.Size = new Size(100, 23);
+            txtDivision.TabIndex = 11;
+            // 
+            // txtMultiplication
+            // 
+            txtMultiplication.Location = new Point(122, 123);
+            txtMultiplication.Name = "txtMultiplication";
+            txtMultiplication.Size = new Size(100, 23);
+            txtMultiplication.TabIndex = 10;
+            // 
+            // txtSubtraction
+            // 
+            txtSubtraction.Location = new Point(122, 91);
+            txtSubtraction.Name = "txtSubtraction";
+            txtSubtraction.Size = new Size(100, 23);
+            txtSubtraction.TabIndex = 9;
+            // 
+            // txtAddition
+            // 
+            txtAddition.Location = new Point(122, 62);
+            txtAddition.Name = "txtAddition";
+            txtAddition.Size = new Size(100, 23);
+            txtAddition.TabIndex = 8;
             // 
             // label8
             // 
@@ -148,33 +165,15 @@
             label8.TabIndex = 7;
             label8.Text = "División";
             // 
-            // txtAddition
+            // label7
             // 
-            txtAddition.Location = new Point(122, 62);
-            txtAddition.Name = "txtAddition";
-            txtAddition.Size = new Size(100, 23);
-            txtAddition.TabIndex = 8;
-            // 
-            // txtSubtraction
-            // 
-            txtSubtraction.Location = new Point(122, 91);
-            txtSubtraction.Name = "txtSubtraction";
-            txtSubtraction.Size = new Size(100, 23);
-            txtSubtraction.TabIndex = 9;
-            // 
-            // txtMultiplication
-            // 
-            txtMultiplication.Location = new Point(122, 123);
-            txtMultiplication.Name = "txtMultiplication";
-            txtMultiplication.Size = new Size(100, 23);
-            txtMultiplication.TabIndex = 10;
-            // 
-            // txtDivision
-            // 
-            txtDivision.Location = new Point(122, 157);
-            txtDivision.Name = "txtDivision";
-            txtDivision.Size = new Size(100, 23);
-            txtDivision.TabIndex = 11;
+            label7.AutoSize = true;
+            label7.Font = new Font("Segoe UI", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label7.Location = new Point(20, 124);
+            label7.Name = "label7";
+            label7.Size = new Size(96, 17);
+            label7.TabIndex = 6;
+            label7.Text = "Multiplicación";
             // 
             // txtSecondValue
             // 
@@ -190,35 +189,38 @@
             txtFirstValue.Size = new Size(100, 23);
             txtFirstValue.TabIndex = 13;
             // 
-            // button1
+            // btnCalculate
             // 
-            button1.Font = new Font("Segoe UI", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            button1.Location = new Point(187, 396);
-            button1.Name = "button1";
-            button1.Size = new Size(79, 33);
-            button1.TabIndex = 14;
-            button1.Text = "Calcular";
-            button1.UseVisualStyleBackColor = true;
+            btnCalculate.Font = new Font("Segoe UI", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            btnCalculate.Location = new Point(187, 396);
+            btnCalculate.Name = "btnCalculate";
+            btnCalculate.Size = new Size(79, 33);
+            btnCalculate.TabIndex = 14;
+            btnCalculate.Text = "Calcular";
+            btnCalculate.UseVisualStyleBackColor = true;
+            btnCalculate.Click += btnCalculate_Click;
             // 
-            // button2
+            // btnClean
             // 
-            button2.Font = new Font("Segoe UI", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            button2.Location = new Point(345, 396);
-            button2.Name = "button2";
-            button2.Size = new Size(81, 33);
-            button2.TabIndex = 15;
-            button2.Text = "Limpiar";
-            button2.UseVisualStyleBackColor = true;
+            btnClean.Font = new Font("Segoe UI", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            btnClean.Location = new Point(345, 396);
+            btnClean.Name = "btnClean";
+            btnClean.Size = new Size(81, 33);
+            btnClean.TabIndex = 15;
+            btnClean.Text = "Limpiar";
+            btnClean.UseVisualStyleBackColor = true;
+            btnClean.Click += btnClean_Click;
             // 
-            // button3
+            // btnLogout
             // 
-            button3.Font = new Font("Segoe UI", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            button3.Location = new Point(494, 396);
-            button3.Name = "button3";
-            button3.Size = new Size(74, 33);
-            button3.TabIndex = 16;
-            button3.Text = "Salir";
-            button3.UseVisualStyleBackColor = true;
+            btnLogout.Font = new Font("Segoe UI", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            btnLogout.Location = new Point(494, 396);
+            btnLogout.Name = "btnLogout";
+            btnLogout.Size = new Size(74, 33);
+            btnLogout.TabIndex = 16;
+            btnLogout.Text = "Salir";
+            btnLogout.UseVisualStyleBackColor = true;
+            btnLogout.Click += btnLogout_Click;
             // 
             // frmOperacion
             // 
@@ -226,9 +228,9 @@
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.DarkGray;
             ClientSize = new Size(800, 450);
-            Controls.Add(button3);
-            Controls.Add(button2);
-            Controls.Add(button1);
+            Controls.Add(btnLogout);
+            Controls.Add(btnClean);
+            Controls.Add(btnCalculate);
             Controls.Add(txtSecondValue);
             Controls.Add(txtFirstValue);
             Controls.Add(groupBox1);
@@ -260,8 +262,8 @@
         private TextBox txtAddition;
         private TextBox txtSecondValue;
         private TextBox txtFirstValue;
-        private Button button1;
-        private Button button2;
-        private Button button3;
+        private Button btnCalculate;
+        private Button btnClean;
+        private Button btnLogout;
     }
 }

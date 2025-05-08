@@ -29,11 +29,11 @@
         private void InitializeComponent()
         {
             label1 = new Label();
-            textBox1 = new TextBox();
-            textBox2 = new TextBox();
+            txtUserName = new TextBox();
+            txtPassword = new TextBox();
             label2 = new Label();
-            button1 = new Button();
-            button2 = new Button();
+            btnSignIn = new Button();
+            btnLogout = new Button();
             SuspendLayout();
             // 
             // label1
@@ -45,19 +45,19 @@
             label1.TabIndex = 0;
             label1.Text = "Usuario:";
             // 
-            // textBox1
+            // txtUserName
             // 
-            textBox1.Location = new Point(110, 51);
-            textBox1.Name = "textBox1";
-            textBox1.Size = new Size(165, 23);
-            textBox1.TabIndex = 1;
+            txtUserName.Location = new Point(110, 51);
+            txtUserName.Name = "txtUserName";
+            txtUserName.Size = new Size(165, 23);
+            txtUserName.TabIndex = 1;
             // 
-            // textBox2
+            // txtPassword
             // 
-            textBox2.Location = new Point(110, 93);
-            textBox2.Name = "textBox2";
-            textBox2.Size = new Size(165, 23);
-            textBox2.TabIndex = 3;
+            txtPassword.Location = new Point(110, 93);
+            txtPassword.Name = "txtPassword";
+            txtPassword.Size = new Size(165, 23);
+            txtPassword.TabIndex = 3;
             // 
             // label2
             // 
@@ -68,34 +68,36 @@
             label2.TabIndex = 2;
             label2.Text = "Contraseña:";
             // 
-            // button1
+            // btnSignIn
             // 
-            button1.Location = new Point(27, 143);
-            button1.Name = "button1";
-            button1.Size = new Size(75, 23);
-            button1.TabIndex = 4;
-            button1.Text = "Ingresar";
-            button1.UseVisualStyleBackColor = true;
+            btnSignIn.Location = new Point(27, 143);
+            btnSignIn.Name = "btnSignIn";
+            btnSignIn.Size = new Size(75, 23);
+            btnSignIn.TabIndex = 4;
+            btnSignIn.Text = "Ingresar";
+            btnSignIn.UseVisualStyleBackColor = true;
+            btnSignIn.Click += btnSignIn_Click;
             // 
-            // button2
+            // btnLogout
             // 
-            button2.Location = new Point(200, 143);
-            button2.Name = "button2";
-            button2.Size = new Size(75, 23);
-            button2.TabIndex = 5;
-            button2.Text = "Salir";
-            button2.UseVisualStyleBackColor = true;
+            btnLogout.Location = new Point(200, 143);
+            btnLogout.Name = "btnLogout";
+            btnLogout.Size = new Size(75, 23);
+            btnLogout.TabIndex = 5;
+            btnLogout.Text = "Salir";
+            btnLogout.UseVisualStyleBackColor = true;
+            btnLogout.Click += btnLogout_Click;
             // 
             // frmIngreso
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(306, 210);
-            Controls.Add(button2);
-            Controls.Add(button1);
-            Controls.Add(textBox2);
+            Controls.Add(btnLogout);
+            Controls.Add(btnSignIn);
+            Controls.Add(txtPassword);
             Controls.Add(label2);
-            Controls.Add(textBox1);
+            Controls.Add(txtUserName);
             Controls.Add(label1);
             Name = "frmIngreso";
             Text = "frmIngreso";
@@ -106,10 +108,10 @@
         #endregion
 
         private Label label1;
-        private TextBox textBox1;
-        private TextBox textBox2;
+        private TextBox txtUserName;
+        private TextBox txtPassword;
         private Label label2;
-        private Button button1;
-        private Button button2;
+        private Button btnSignIn;
+        private Button btnLogout;
     }
 }

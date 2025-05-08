@@ -35,15 +35,15 @@
             label5 = new Label();
             label6 = new Label();
             label7 = new Label();
-            button1 = new Button();
-            button2 = new Button();
-            button3 = new Button();
-            textBox1 = new TextBox();
-            textBox2 = new TextBox();
-            textBox3 = new TextBox();
-            textBox4 = new TextBox();
-            textBox5 = new TextBox();
-            textBox6 = new TextBox();
+            btnCalculate = new Button();
+            btnClean = new Button();
+            btnLogout = new Button();
+            txtNumOfHours = new TextBox();
+            txtRatePerHour = new TextBox();
+            txtBaseSalary = new TextBox();
+            txtBonification = new TextBox();
+            txtDiscount = new TextBox();
+            txtGrossSalary = new TextBox();
             SuspendLayout();
             // 
             // label1
@@ -108,89 +108,92 @@
             label7.Size = new Size(0, 15);
             label7.TabIndex = 6;
             // 
-            // button1
+            // btnCalculate
             // 
-            button1.Location = new Point(40, 369);
-            button1.Name = "button1";
-            button1.Size = new Size(75, 23);
-            button1.TabIndex = 7;
-            button1.Text = "Calcular";
-            button1.UseVisualStyleBackColor = true;
+            btnCalculate.Location = new Point(40, 369);
+            btnCalculate.Name = "btnCalculate";
+            btnCalculate.Size = new Size(75, 23);
+            btnCalculate.TabIndex = 7;
+            btnCalculate.Text = "Calcular";
+            btnCalculate.UseVisualStyleBackColor = true;
+            btnCalculate.Click += btnCalculate_Click;
             // 
-            // button2
+            // btnClean
             // 
-            button2.Location = new Point(212, 369);
-            button2.Name = "button2";
-            button2.Size = new Size(75, 23);
-            button2.TabIndex = 8;
-            button2.Text = "Limpiar";
-            button2.UseVisualStyleBackColor = true;
+            btnClean.Location = new Point(212, 369);
+            btnClean.Name = "btnClean";
+            btnClean.Size = new Size(75, 23);
+            btnClean.TabIndex = 8;
+            btnClean.Text = "Limpiar";
+            btnClean.UseVisualStyleBackColor = true;
+            btnClean.Click += btnClean_Click;
             // 
-            // button3
+            // btnLogout
             // 
-            button3.Location = new Point(391, 369);
-            button3.Name = "button3";
-            button3.Size = new Size(75, 23);
-            button3.TabIndex = 9;
-            button3.Text = "Salir";
-            button3.UseVisualStyleBackColor = true;
+            btnLogout.Location = new Point(391, 369);
+            btnLogout.Name = "btnLogout";
+            btnLogout.Size = new Size(75, 23);
+            btnLogout.TabIndex = 9;
+            btnLogout.Text = "Salir";
+            btnLogout.UseVisualStyleBackColor = true;
+            btnLogout.Click += btnLogout_Click;
             // 
-            // textBox1
+            // txtNumOfHours
             // 
-            textBox1.Location = new Point(142, 71);
-            textBox1.Name = "textBox1";
-            textBox1.Size = new Size(100, 23);
-            textBox1.TabIndex = 10;
+            txtNumOfHours.Location = new Point(142, 71);
+            txtNumOfHours.Name = "txtNumOfHours";
+            txtNumOfHours.Size = new Size(100, 23);
+            txtNumOfHours.TabIndex = 10;
             // 
-            // textBox2
+            // txtRatePerHour
             // 
-            textBox2.Location = new Point(142, 116);
-            textBox2.Name = "textBox2";
-            textBox2.Size = new Size(100, 23);
-            textBox2.TabIndex = 11;
+            txtRatePerHour.Location = new Point(142, 116);
+            txtRatePerHour.Name = "txtRatePerHour";
+            txtRatePerHour.Size = new Size(100, 23);
+            txtRatePerHour.TabIndex = 11;
             // 
-            // textBox3
+            // txtBaseSalary
             // 
-            textBox3.Location = new Point(142, 159);
-            textBox3.Name = "textBox3";
-            textBox3.Size = new Size(100, 23);
-            textBox3.TabIndex = 12;
+            txtBaseSalary.Location = new Point(142, 159);
+            txtBaseSalary.Name = "txtBaseSalary";
+            txtBaseSalary.Size = new Size(100, 23);
+            txtBaseSalary.TabIndex = 12;
             // 
-            // textBox4
+            // txtBonification
             // 
-            textBox4.Location = new Point(142, 202);
-            textBox4.Name = "textBox4";
-            textBox4.Size = new Size(100, 23);
-            textBox4.TabIndex = 13;
+            txtBonification.Location = new Point(142, 202);
+            txtBonification.Name = "txtBonification";
+            txtBonification.Size = new Size(100, 23);
+            txtBonification.TabIndex = 13;
             // 
-            // textBox5
+            // txtDiscount
             // 
-            textBox5.Location = new Point(142, 247);
-            textBox5.Name = "textBox5";
-            textBox5.Size = new Size(100, 23);
-            textBox5.TabIndex = 14;
+            txtDiscount.Location = new Point(142, 247);
+            txtDiscount.Name = "txtDiscount";
+            txtDiscount.Size = new Size(100, 23);
+            txtDiscount.TabIndex = 14;
             // 
-            // textBox6
+            // txtGrossSalary
             // 
-            textBox6.Location = new Point(142, 290);
-            textBox6.Name = "textBox6";
-            textBox6.Size = new Size(100, 23);
-            textBox6.TabIndex = 15;
+            txtGrossSalary.Location = new Point(142, 290);
+            txtGrossSalary.Name = "txtGrossSalary";
+            txtGrossSalary.Size = new Size(100, 23);
+            txtGrossSalary.TabIndex = 15;
             // 
             // frmSueldoFinal
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(527, 450);
-            Controls.Add(textBox6);
-            Controls.Add(textBox5);
-            Controls.Add(textBox4);
-            Controls.Add(textBox3);
-            Controls.Add(textBox2);
-            Controls.Add(textBox1);
-            Controls.Add(button3);
-            Controls.Add(button2);
-            Controls.Add(button1);
+            Controls.Add(txtGrossSalary);
+            Controls.Add(txtDiscount);
+            Controls.Add(txtBonification);
+            Controls.Add(txtBaseSalary);
+            Controls.Add(txtRatePerHour);
+            Controls.Add(txtNumOfHours);
+            Controls.Add(btnLogout);
+            Controls.Add(btnClean);
+            Controls.Add(btnCalculate);
             Controls.Add(label7);
             Controls.Add(label6);
             Controls.Add(label5);
@@ -213,14 +216,14 @@
         private Label label5;
         private Label label6;
         private Label label7;
-        private Button button1;
-        private Button button2;
-        private Button button3;
-        private TextBox textBox1;
-        private TextBox textBox2;
-        private TextBox textBox3;
-        private TextBox textBox4;
-        private TextBox textBox5;
-        private TextBox textBox6;
+        private Button btnCalculate;
+        private Button btnClean;
+        private Button btnLogout;
+        private TextBox txtNumOfHours;
+        private TextBox txtRatePerHour;
+        private TextBox txtBaseSalary;
+        private TextBox txtBonification;
+        private TextBox txtDiscount;
+        private TextBox txtGrossSalary;
     }
 }

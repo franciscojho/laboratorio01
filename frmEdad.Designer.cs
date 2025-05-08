@@ -29,12 +29,12 @@
         private void InitializeComponent()
         {
             label1 = new Label();
-            textBox1 = new TextBox();
+            txtAge = new TextBox();
             label2 = new Label();
-            textBox2 = new TextBox();
-            button1 = new Button();
-            button2 = new Button();
-            button3 = new Button();
+            txtMessage = new TextBox();
+            btnCalculate = new Button();
+            btnReset = new Button();
+            btnLogout = new Button();
             SuspendLayout();
             // 
             // label1
@@ -46,12 +46,12 @@
             label1.TabIndex = 0;
             label1.Text = "Edad:";
             // 
-            // textBox1
+            // txtAge
             // 
-            textBox1.Location = new Point(90, 27);
-            textBox1.Name = "textBox1";
-            textBox1.Size = new Size(100, 23);
-            textBox1.TabIndex = 1;
+            txtAge.Location = new Point(90, 27);
+            txtAge.Name = "txtAge";
+            txtAge.Size = new Size(100, 23);
+            txtAge.TabIndex = 1;
             // 
             // label2
             // 
@@ -62,51 +62,54 @@
             label2.TabIndex = 2;
             label2.Text = "Mensaje:";
             // 
-            // textBox2
+            // txtMessage
             // 
-            textBox2.Location = new Point(90, 67);
-            textBox2.Name = "textBox2";
-            textBox2.Size = new Size(308, 23);
-            textBox2.TabIndex = 3;
+            txtMessage.Location = new Point(90, 67);
+            txtMessage.Name = "txtMessage";
+            txtMessage.Size = new Size(308, 23);
+            txtMessage.TabIndex = 3;
             // 
-            // button1
+            // btnCalculate
             // 
-            button1.Location = new Point(20, 114);
-            button1.Name = "button1";
-            button1.Size = new Size(75, 23);
-            button1.TabIndex = 4;
-            button1.Text = "Calcular";
-            button1.UseVisualStyleBackColor = true;
+            btnCalculate.Location = new Point(20, 114);
+            btnCalculate.Name = "btnCalculate";
+            btnCalculate.Size = new Size(75, 23);
+            btnCalculate.TabIndex = 4;
+            btnCalculate.Text = "Calcular";
+            btnCalculate.UseVisualStyleBackColor = true;
+            btnCalculate.Click += btnCalculate_Click;
             // 
-            // button2
+            // btnReset
             // 
-            button2.Location = new Point(178, 114);
-            button2.Name = "button2";
-            button2.Size = new Size(75, 23);
-            button2.TabIndex = 5;
-            button2.Text = "Mostrar";
-            button2.UseVisualStyleBackColor = true;
+            btnReset.Location = new Point(178, 114);
+            btnReset.Name = "btnReset";
+            btnReset.Size = new Size(75, 23);
+            btnReset.TabIndex = 5;
+            btnReset.Text = "Limpiar";
+            btnReset.UseVisualStyleBackColor = true;
+            btnReset.Click += btnReset_Click;
             // 
-            // button3
+            // btnLogout
             // 
-            button3.Location = new Point(323, 114);
-            button3.Name = "button3";
-            button3.Size = new Size(75, 23);
-            button3.TabIndex = 6;
-            button3.Text = "Salir";
-            button3.UseVisualStyleBackColor = true;
+            btnLogout.Location = new Point(323, 114);
+            btnLogout.Name = "btnLogout";
+            btnLogout.Size = new Size(75, 23);
+            btnLogout.TabIndex = 6;
+            btnLogout.Text = "Salir";
+            btnLogout.UseVisualStyleBackColor = true;
+            btnLogout.Click += btnLogout_Click;
             // 
             // frmEdad
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(421, 169);
-            Controls.Add(button3);
-            Controls.Add(button2);
-            Controls.Add(button1);
-            Controls.Add(textBox2);
+            Controls.Add(btnLogout);
+            Controls.Add(btnReset);
+            Controls.Add(btnCalculate);
+            Controls.Add(txtMessage);
             Controls.Add(label2);
-            Controls.Add(textBox1);
+            Controls.Add(txtAge);
             Controls.Add(label1);
             Name = "frmEdad";
             Text = "frmEdad";
@@ -117,11 +120,11 @@
         #endregion
 
         private Label label1;
-        private TextBox textBox1;
+        private TextBox txtAge;
         private Label label2;
-        private TextBox textBox2;
-        private Button button1;
-        private Button button2;
-        private Button button3;
+        private TextBox txtMessage;
+        private Button btnCalculate;
+        private Button btnReset;
+        private Button btnLogout;
     }
 }

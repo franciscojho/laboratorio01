@@ -29,39 +29,37 @@
         private void InitializeComponent()
         {
             label1 = new Label();
-            comboBox1 = new ComboBox();
-            textBox1 = new TextBox();
+            cbProducts = new ComboBox();
+            txtPrice = new TextBox();
             label2 = new Label();
             label3 = new Label();
-            textBox2 = new TextBox();
+            txtQuantity = new TextBox();
             label4 = new Label();
-            textBox3 = new TextBox();
-            radioButton1 = new RadioButton();
+            txtSubTotal = new TextBox();
+            rbFivePercentage = new RadioButton();
             label5 = new Label();
-            groupBox1 = new GroupBox();
-            radioButton2 = new RadioButton();
-            radioButton3 = new RadioButton();
-            radioButton4 = new RadioButton();
+            gbRadioButtons = new GroupBox();
+            rbElevenPercentage = new RadioButton();
+            rbNinePercentage = new RadioButton();
+            rbSevenPercentage = new RadioButton();
             label6 = new Label();
             groupBox2 = new GroupBox();
-            radioButton7 = new RadioButton();
-            radioButton8 = new RadioButton();
+            rbIsTicket = new RadioButton();
+            rbIsInvoice = new RadioButton();
             label7 = new Label();
-            textBox4 = new TextBox();
+            txtDiscount = new TextBox();
             label8 = new Label();
-            textBox5 = new TextBox();
+            txtTax = new TextBox();
             label9 = new Label();
-            checkBox1 = new CheckBox();
+            cbDelivery = new CheckBox();
             label10 = new Label();
-            textBox6 = new TextBox();
-            label11 = new Label();
-            textBox7 = new TextBox();
+            txtTotalDelivery = new TextBox();
             label12 = new Label();
-            textBox8 = new TextBox();
-            button1 = new Button();
+            txtTotalToPay = new TextBox();
+            btnCalculate = new Button();
             button2 = new Button();
             button3 = new Button();
-            groupBox1.SuspendLayout();
+            gbRadioButtons.SuspendLayout();
             groupBox2.SuspendLayout();
             SuspendLayout();
             // 
@@ -74,20 +72,21 @@
             label1.TabIndex = 0;
             label1.Text = "Producto:";
             // 
-            // comboBox1
+            // cbProducts
             // 
-            comboBox1.FormattingEnabled = true;
-            comboBox1.Location = new Point(165, 20);
-            comboBox1.Name = "comboBox1";
-            comboBox1.Size = new Size(469, 23);
-            comboBox1.TabIndex = 1;
+            cbProducts.FormattingEnabled = true;
+            cbProducts.Location = new Point(165, 20);
+            cbProducts.Name = "cbProducts";
+            cbProducts.Size = new Size(469, 23);
+            cbProducts.TabIndex = 1;
+            cbProducts.SelectedIndexChanged += cbProducts_SelectedIndexChanged;
             // 
-            // textBox1
+            // txtPrice
             // 
-            textBox1.Location = new Point(165, 56);
-            textBox1.Name = "textBox1";
-            textBox1.Size = new Size(100, 23);
-            textBox1.TabIndex = 2;
+            txtPrice.Location = new Point(165, 56);
+            txtPrice.Name = "txtPrice";
+            txtPrice.Size = new Size(100, 23);
+            txtPrice.TabIndex = 2;
             // 
             // label2
             // 
@@ -107,12 +106,13 @@
             label3.TabIndex = 5;
             label3.Text = "Cantidad:";
             // 
-            // textBox2
+            // txtQuantity
             // 
-            textBox2.Location = new Point(165, 98);
-            textBox2.Name = "textBox2";
-            textBox2.Size = new Size(100, 23);
-            textBox2.TabIndex = 4;
+            txtQuantity.Location = new Point(165, 98);
+            txtQuantity.Name = "txtQuantity";
+            txtQuantity.Size = new Size(100, 23);
+            txtQuantity.TabIndex = 4;
+            txtQuantity.TextChanged += txtQuantity_TextChanged;
             // 
             // label4
             // 
@@ -124,23 +124,24 @@
             label4.TabIndex = 7;
             label4.Text = "Subtotal:";
             // 
-            // textBox3
+            // txtSubTotal
             // 
-            textBox3.Location = new Point(165, 139);
-            textBox3.Name = "textBox3";
-            textBox3.Size = new Size(100, 23);
-            textBox3.TabIndex = 6;
+            txtSubTotal.Location = new Point(165, 139);
+            txtSubTotal.Name = "txtSubTotal";
+            txtSubTotal.Size = new Size(100, 23);
+            txtSubTotal.TabIndex = 6;
             // 
-            // radioButton1
+            // rbFivePercentage
             // 
-            radioButton1.AutoSize = true;
-            radioButton1.Location = new Point(34, 11);
-            radioButton1.Name = "radioButton1";
-            radioButton1.Size = new Size(60, 19);
-            radioButton1.TabIndex = 8;
-            radioButton1.TabStop = true;
-            radioButton1.Text = "A (5%)";
-            radioButton1.UseVisualStyleBackColor = true;
+            rbFivePercentage.AutoSize = true;
+            rbFivePercentage.Location = new Point(34, 11);
+            rbFivePercentage.Name = "rbFivePercentage";
+            rbFivePercentage.Size = new Size(60, 19);
+            rbFivePercentage.TabIndex = 8;
+            rbFivePercentage.TabStop = true;
+            rbFivePercentage.Text = "A (5%)";
+            rbFivePercentage.UseVisualStyleBackColor = true;
+            rbFivePercentage.CheckedChanged += radioButton_CheckedChanged;
             // 
             // label5
             // 
@@ -151,50 +152,53 @@
             label5.TabIndex = 9;
             label5.Text = "Categoria:";
             // 
-            // groupBox1
+            // gbRadioButtons
             // 
-            groupBox1.Controls.Add(radioButton4);
-            groupBox1.Controls.Add(radioButton3);
-            groupBox1.Controls.Add(radioButton2);
-            groupBox1.Controls.Add(radioButton1);
-            groupBox1.Location = new Point(165, 168);
-            groupBox1.Name = "groupBox1";
-            groupBox1.Size = new Size(492, 39);
-            groupBox1.TabIndex = 10;
-            groupBox1.TabStop = false;
+            gbRadioButtons.Controls.Add(rbElevenPercentage);
+            gbRadioButtons.Controls.Add(rbNinePercentage);
+            gbRadioButtons.Controls.Add(rbSevenPercentage);
+            gbRadioButtons.Controls.Add(rbFivePercentage);
+            gbRadioButtons.Location = new Point(165, 168);
+            gbRadioButtons.Name = "gbRadioButtons";
+            gbRadioButtons.Size = new Size(492, 39);
+            gbRadioButtons.TabIndex = 10;
+            gbRadioButtons.TabStop = false;
             // 
-            // radioButton2
+            // rbElevenPercentage
             // 
-            radioButton2.AutoSize = true;
-            radioButton2.Location = new Point(124, 11);
-            radioButton2.Name = "radioButton2";
-            radioButton2.Size = new Size(59, 19);
-            radioButton2.TabIndex = 9;
-            radioButton2.TabStop = true;
-            radioButton2.Text = "B (7%)";
-            radioButton2.UseVisualStyleBackColor = true;
+            rbElevenPercentage.AutoSize = true;
+            rbElevenPercentage.Location = new Point(389, 11);
+            rbElevenPercentage.Name = "rbElevenPercentage";
+            rbElevenPercentage.Size = new Size(66, 19);
+            rbElevenPercentage.TabIndex = 11;
+            rbElevenPercentage.TabStop = true;
+            rbElevenPercentage.Text = "D (11%)";
+            rbElevenPercentage.UseVisualStyleBackColor = true;
+            rbElevenPercentage.CheckedChanged += radioButton_CheckedChanged;
             // 
-            // radioButton3
+            // rbNinePercentage
             // 
-            radioButton3.AutoSize = true;
-            radioButton3.Location = new Point(254, 11);
-            radioButton3.Name = "radioButton3";
-            radioButton3.Size = new Size(60, 19);
-            radioButton3.TabIndex = 10;
-            radioButton3.TabStop = true;
-            radioButton3.Text = "C (9%)";
-            radioButton3.UseVisualStyleBackColor = true;
+            rbNinePercentage.AutoSize = true;
+            rbNinePercentage.Location = new Point(254, 11);
+            rbNinePercentage.Name = "rbNinePercentage";
+            rbNinePercentage.Size = new Size(60, 19);
+            rbNinePercentage.TabIndex = 10;
+            rbNinePercentage.TabStop = true;
+            rbNinePercentage.Text = "C (9%)";
+            rbNinePercentage.UseVisualStyleBackColor = true;
+            rbNinePercentage.CheckedChanged += radioButton_CheckedChanged;
             // 
-            // radioButton4
+            // rbSevenPercentage
             // 
-            radioButton4.AutoSize = true;
-            radioButton4.Location = new Point(389, 11);
-            radioButton4.Name = "radioButton4";
-            radioButton4.Size = new Size(66, 19);
-            radioButton4.TabIndex = 11;
-            radioButton4.TabStop = true;
-            radioButton4.Text = "D (11%)";
-            radioButton4.UseVisualStyleBackColor = true;
+            rbSevenPercentage.AutoSize = true;
+            rbSevenPercentage.Location = new Point(124, 11);
+            rbSevenPercentage.Name = "rbSevenPercentage";
+            rbSevenPercentage.Size = new Size(59, 19);
+            rbSevenPercentage.TabIndex = 9;
+            rbSevenPercentage.TabStop = true;
+            rbSevenPercentage.Text = "B (7%)";
+            rbSevenPercentage.UseVisualStyleBackColor = true;
+            rbSevenPercentage.CheckedChanged += radioButton_CheckedChanged;
             // 
             // label6
             // 
@@ -207,35 +211,37 @@
             // 
             // groupBox2
             // 
-            groupBox2.Controls.Add(radioButton7);
-            groupBox2.Controls.Add(radioButton8);
+            groupBox2.Controls.Add(rbIsTicket);
+            groupBox2.Controls.Add(rbIsInvoice);
             groupBox2.Location = new Point(165, 251);
             groupBox2.Name = "groupBox2";
             groupBox2.Size = new Size(213, 34);
             groupBox2.TabIndex = 12;
             groupBox2.TabStop = false;
             // 
-            // radioButton7
+            // rbIsTicket
             // 
-            radioButton7.AutoSize = true;
-            radioButton7.Location = new Point(124, 11);
-            radioButton7.Name = "radioButton7";
-            radioButton7.Size = new Size(58, 19);
-            radioButton7.TabIndex = 9;
-            radioButton7.TabStop = true;
-            radioButton7.Text = "Boleta";
-            radioButton7.UseVisualStyleBackColor = true;
+            rbIsTicket.AutoSize = true;
+            rbIsTicket.Location = new Point(124, 11);
+            rbIsTicket.Name = "rbIsTicket";
+            rbIsTicket.Size = new Size(58, 19);
+            rbIsTicket.TabIndex = 9;
+            rbIsTicket.TabStop = true;
+            rbIsTicket.Text = "Boleta";
+            rbIsTicket.UseVisualStyleBackColor = true;
+            rbIsTicket.CheckedChanged += radioButtonReceiptType_CheckedChanged;
             // 
-            // radioButton8
+            // rbIsInvoice
             // 
-            radioButton8.AutoSize = true;
-            radioButton8.Location = new Point(34, 11);
-            radioButton8.Name = "radioButton8";
-            radioButton8.Size = new Size(64, 19);
-            radioButton8.TabIndex = 8;
-            radioButton8.TabStop = true;
-            radioButton8.Text = "Factura";
-            radioButton8.UseVisualStyleBackColor = true;
+            rbIsInvoice.AutoSize = true;
+            rbIsInvoice.Location = new Point(34, 11);
+            rbIsInvoice.Name = "rbIsInvoice";
+            rbIsInvoice.Size = new Size(64, 19);
+            rbIsInvoice.TabIndex = 8;
+            rbIsInvoice.TabStop = true;
+            rbIsInvoice.Text = "Factura";
+            rbIsInvoice.UseVisualStyleBackColor = true;
+            rbIsInvoice.CheckedChanged += radioButtonReceiptType_CheckedChanged;
             // 
             // label7
             // 
@@ -247,12 +253,12 @@
             label7.TabIndex = 14;
             label7.Text = "Descuento:";
             // 
-            // textBox4
+            // txtDiscount
             // 
-            textBox4.Location = new Point(165, 217);
-            textBox4.Name = "textBox4";
-            textBox4.Size = new Size(100, 23);
-            textBox4.TabIndex = 13;
+            txtDiscount.Location = new Point(165, 217);
+            txtDiscount.Name = "txtDiscount";
+            txtDiscount.Size = new Size(100, 23);
+            txtDiscount.TabIndex = 13;
             // 
             // label8
             // 
@@ -264,12 +270,12 @@
             label8.TabIndex = 16;
             label8.Text = "IGV:";
             // 
-            // textBox5
+            // txtTax
             // 
-            textBox5.Location = new Point(165, 291);
-            textBox5.Name = "textBox5";
-            textBox5.Size = new Size(100, 23);
-            textBox5.TabIndex = 15;
+            txtTax.Location = new Point(165, 291);
+            txtTax.Name = "txtTax";
+            txtTax.Size = new Size(100, 23);
+            txtTax.TabIndex = 15;
             // 
             // label9
             // 
@@ -280,15 +286,16 @@
             label9.TabIndex = 17;
             label9.Text = "Delivery:";
             // 
-            // checkBox1
+            // cbDelivery
             // 
-            checkBox1.AutoSize = true;
-            checkBox1.Location = new Point(165, 333);
-            checkBox1.Name = "checkBox1";
-            checkBox1.Size = new Size(78, 19);
-            checkBox1.TabIndex = 18;
-            checkBox1.Text = "Sí (S/7.00)";
-            checkBox1.UseVisualStyleBackColor = true;
+            cbDelivery.AutoSize = true;
+            cbDelivery.Location = new Point(165, 333);
+            cbDelivery.Name = "cbDelivery";
+            cbDelivery.Size = new Size(78, 19);
+            cbDelivery.TabIndex = 18;
+            cbDelivery.Text = "Sí (S/7.00)";
+            cbDelivery.UseVisualStyleBackColor = true;
+            cbDelivery.CheckedChanged += cbDelivery_CheckedChanged;
             // 
             // label10
             // 
@@ -300,29 +307,12 @@
             label10.TabIndex = 20;
             label10.Text = "Total Envío:";
             // 
-            // textBox6
+            // txtTotalDelivery
             // 
-            textBox6.Location = new Point(165, 372);
-            textBox6.Name = "textBox6";
-            textBox6.Size = new Size(100, 23);
-            textBox6.TabIndex = 19;
-            // 
-            // label11
-            // 
-            label11.AutoSize = true;
-            label11.Location = new Point(279, 209);
-            label11.Name = "label11";
-            label11.RightToLeft = RightToLeft.No;
-            label11.Size = new Size(28, 15);
-            label11.TabIndex = 22;
-            label11.Text = "IGV:";
-            // 
-            // textBox7
-            // 
-            textBox7.Location = new Point(422, 206);
-            textBox7.Name = "textBox7";
-            textBox7.Size = new Size(100, 23);
-            textBox7.TabIndex = 21;
+            txtTotalDelivery.Location = new Point(165, 372);
+            txtTotalDelivery.Name = "txtTotalDelivery";
+            txtTotalDelivery.Size = new Size(100, 23);
+            txtTotalDelivery.TabIndex = 19;
             // 
             // label12
             // 
@@ -334,21 +324,22 @@
             label12.TabIndex = 24;
             label12.Text = "Total a Pagar:";
             // 
-            // textBox8
+            // txtTotalToPay
             // 
-            textBox8.Location = new Point(165, 407);
-            textBox8.Name = "textBox8";
-            textBox8.Size = new Size(100, 23);
-            textBox8.TabIndex = 23;
+            txtTotalToPay.Location = new Point(165, 407);
+            txtTotalToPay.Name = "txtTotalToPay";
+            txtTotalToPay.Size = new Size(100, 23);
+            txtTotalToPay.TabIndex = 23;
             // 
-            // button1
+            // btnCalculate
             // 
-            button1.Location = new Point(691, 23);
-            button1.Name = "button1";
-            button1.Size = new Size(75, 23);
-            button1.TabIndex = 25;
-            button1.Text = "Calcular";
-            button1.UseVisualStyleBackColor = true;
+            btnCalculate.Location = new Point(691, 23);
+            btnCalculate.Name = "btnCalculate";
+            btnCalculate.Size = new Size(75, 23);
+            btnCalculate.TabIndex = 25;
+            btnCalculate.Text = "Calcular";
+            btnCalculate.UseVisualStyleBackColor = true;
+            btnCalculate.Click += btnCalculate_Click;
             // 
             // button2
             // 
@@ -375,36 +366,33 @@
             ClientSize = new Size(800, 458);
             Controls.Add(button3);
             Controls.Add(button2);
-            Controls.Add(button1);
+            Controls.Add(btnCalculate);
             Controls.Add(label12);
-            Controls.Add(textBox8);
-            Controls.Add(label11);
-            Controls.Add(textBox7);
+            Controls.Add(txtTotalToPay);
             Controls.Add(label10);
-            Controls.Add(textBox6);
-            Controls.Add(checkBox1);
+            Controls.Add(txtTotalDelivery);
+            Controls.Add(cbDelivery);
             Controls.Add(label9);
             Controls.Add(label8);
-            Controls.Add(textBox5);
+            Controls.Add(txtTax);
             Controls.Add(label7);
-            Controls.Add(textBox4);
+            Controls.Add(txtDiscount);
             Controls.Add(groupBox2);
             Controls.Add(label6);
-            Controls.Add(groupBox1);
+            Controls.Add(gbRadioButtons);
             Controls.Add(label5);
             Controls.Add(label4);
-            Controls.Add(textBox3);
+            Controls.Add(txtSubTotal);
             Controls.Add(label3);
-            Controls.Add(textBox2);
+            Controls.Add(txtQuantity);
             Controls.Add(label2);
-            Controls.Add(textBox1);
-            Controls.Add(comboBox1);
+            Controls.Add(txtPrice);
+            Controls.Add(cbProducts);
             Controls.Add(label1);
             Name = "frmTotalPago";
             Text = "frmTotalPago";
-            Load += this.frmTotalPago_Load;
-            groupBox1.ResumeLayout(false);
-            groupBox1.PerformLayout();
+            gbRadioButtons.ResumeLayout(false);
+            gbRadioButtons.PerformLayout();
             groupBox2.ResumeLayout(false);
             groupBox2.PerformLayout();
             ResumeLayout(false);
@@ -414,37 +402,36 @@
         #endregion
 
         private Label label1;
-        private ComboBox comboBox1;
-        private TextBox textBox1;
+        private ComboBox cbProducts;
+        private TextBox txtPrice;
         private Label label2;
         private Label label3;
-        private TextBox textBox2;
+        private TextBox txtQuantity;
         private Label label4;
-        private TextBox textBox3;
-        private RadioButton radioButton1;
+        private TextBox txtSubTotal;
+        private RadioButton rbFivePercentage;
         private Label label5;
-        private GroupBox groupBox1;
-        private RadioButton radioButton4;
-        private RadioButton radioButton3;
-        private RadioButton radioButton2;
+        private GroupBox gbRadioButtons;
+        private RadioButton rbElevenPercentage;
+        private RadioButton rbNinePercentage;
+        private RadioButton rbSevenPercentage;
         private Label label6;
         private GroupBox groupBox2;
-        private RadioButton radioButton7;
-        private RadioButton radioButton8;
+        private RadioButton rbIsTicket;
+        private RadioButton rbIsInvoice;
         private Label label7;
-        private TextBox textBox4;
+        private TextBox txtDiscount;
         private Label label8;
-        private TextBox textBox5;
+        private TextBox txtTax;
         private Label label9;
-        private CheckBox checkBox1;
+        private CheckBox cbDelivery;
         private Label label10;
-        private TextBox textBox6;
-        private Label label11;
-        private TextBox textBox7;
+        private TextBox txtTotalDelivery;
         private Label label12;
-        private TextBox textBox8;
+        private TextBox txtTotalToPay;
         private Button button1;
         private Button button2;
         private Button button3;
+        private Button btnCalculate;
     }
 }
